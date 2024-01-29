@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    user-select: none;
+}
+
+.calculator {
+    height: 525px;
+    width: 100%;
+    max-width: 375px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.5em;
+    background: linear-gradient(to bottom right, #414141 0%, #000000 100%);
+    overflow: hidden;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
+}
+
+/* =======================
+    Layout & Styling
+   ======================= */
+
+.calculator-display {
+    height: 40%;
+    font-size: 1.2em;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    text-align: right;
+    padding: 0.75em 1em;
+    color: white;
+}
+
+.calculator-keys {
+    height: 60%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: 
+        "clear del modulus divide"
+        "seven eight nine times"
+        "four five six minus"
+        "one two three plus"
+        "icon zero dot equals";
+}
+
+/* Grid Area */
+.modulus { grid-area: modulus; }
+.divide { grid-area: divide; }
+.seven { grid-area: seven; }
+.eight { grid-area: eight; }
+.nine { grid-area: nine; }
+.times { grid-area: times; }
+.four { grid-area: four; }
+.five { grid-area: five; }
+.six { grid-area: six; }
+.minus { grid-area: minus; }
+.one { grid-area: one; }
+.two { grid-area: two; }
+.three { grid-area: three; }
+.plus { grid-area: plus; }
+.icon { grid-area: icon; }
+.zero { grid-area: zero; }
+.dot { grid-area: dot; }
+.equals { grid-area: equals; }
+
+/* Styling */
+
+button,
+.icon {
+    font-size: 1.2em;
+    cursor: pointer;
+    border: none;
+    background-color: #f2f2f2;
+    transition: background-color 0.5s;
+}
+
+.del,
+.operator {
+    background-color: rgb(251, 251, 251);
+    color: #f44336;
+}
+
+.equals,
+.clear {
+    background: linear-gradient(to bottom left, #ff6666 0%, #cc0000 100%);
+    color: #fff;
+}
+
+.del:active,
+.operator:active{
+    background-color: #e1ddd7;
+}
+
+.number:active {
+    background-color: #d0d0d0;
+}
+
+.disabled {
+    pointer-events: none;
+}
+
+.icon {
+    pointer-events: none;
+}
+
+/* =======================
+    Media Queries
+   ======================= */
+
+   
+/* For mobile devices  */
+@media screen and (max-width: 475px) {
+
+    .calculator {
+        height: 100%;
+        width: 100%;
+        max-width: none;
+        margin: 0;
+    }
+}
+
+/* Hover effect for non-touchscreen devices */
+@media only screen and (hover: hover){
+
+    .number:hover {
+        background-color: #d0d0d0;
+    }
+
+    .del:hover,
+    .operator:hover {
+        background-color: #e1ddd7;
+    }
+}
