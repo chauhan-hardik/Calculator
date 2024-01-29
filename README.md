@@ -30,7 +30,7 @@ Check out the live demo: [Calculator](https://chauhan-hardik.github.io/Calculato
 
 ## Known Issues
 
-1. **Mobile Layout with Link**: On smaller screens, the presence of a link in the demo may affect the layout, pushing the last line of buttons below the viewport. To view the full calculator, users may need to scroll up to hide the link. This issue is being actively worked on, and a fix will be provided in future updates.
+1. **Mobile Layout with Link**: On smaller screens, the presence of a link in the demo may affect the layout, pushing the last line of buttons below the viewport. To view the full calculator, users may need to scroll up to hide the link.
 
 ## Installation
 
